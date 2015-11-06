@@ -1,8 +1,6 @@
 #!/bin/bash
 
 filename="$1"
-lastname="DEFAULT"
-firstname="DEFAULT"
 reponame="DEFAULT"
 repo="DEFAULT"
 sep="_"
@@ -12,11 +10,14 @@ while read -r line
         
         IFS=','
         read -a array <<< "$line"
-        lastname=${array[0]}
-        firstname=${array[1]}
-        repo=${array[2]}
-        reponame="$lastname$sep$firstname"
+        reponame=${array[0]}
+        repo=${array[1]}
+        if [[ $repo == *"@bitbucket.org"* ]]
+        then
+            repo=$( echo $repo| sed 's/.*@/git@/g' | sed 's/.org\//.org:/g')
+        fi
+        
         reponame=`echo $reponame | tr '[:upper:]' '[:lower:]'`
-        echo "$reponame"
+        echo "$reponame" "$repo"
         `git clone $repo $reponame`
     done < "$filename"
