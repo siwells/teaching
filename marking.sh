@@ -12,19 +12,17 @@ template="template"$tex
 tmpcsv="tmp"$csv
 outputfolder="generated/"
 
-# Process Class File (CSV)
-# Replace ',"' with '|'
-# Replace closing '"' with nothing
-# Write out to tmp csv file
-
+# Create an output location
 mkdir $outputfolder
 
+# Process input CSV to get it into a manageable form
 cat "$infile" | sed -e 's/,"/|/' | sed -e 's/"//' > $tmpcsv
 
 # Process each student in class file
 
 while IFS=$'\r\n' read -r line
     do
+        # Extract name & number from input
         IFS=$'|'
         read -a array <<< "$line"
         studentnumber="${array[0]}"
