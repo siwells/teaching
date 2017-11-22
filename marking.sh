@@ -49,3 +49,5 @@ while IFS=$'\r\n' read -r line
 
     done < "$tmpcsv"
 
+# Clean up temporary files
+rm $tmpcsv
