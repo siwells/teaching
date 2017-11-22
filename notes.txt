@@ -3,5 +3,5 @@ Cleaning Procedure
 
 [1] Copy name+number from admin sheet
 [2] Save to CSV
-[3] Use marking script to produce student mark sheets, e.g. ./marking.sh class.csv
+[3] Use marking script to produce student mark sheets, e.g. ./marking.sh class.csv template.tex
 
