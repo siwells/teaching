@@ -1,13 +1,15 @@
 #!/bin/bash
 
 infile="$1"
+template="$2"
+
 studentname="DEFAULT"
 studentnumber="DEFAULT"
 sep="_"
 tex=".tex"
 csv=".csv"
 outfile="default"$tex
-template="template"$tex
+
 #tmptex="tmp"$tex
 tmpcsv="tmp"$csv
 outputfolder="generated/"
