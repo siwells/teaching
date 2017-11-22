@@ -10,11 +10,14 @@ outfile="default"$tex
 template="template"$tex
 #tmptex="tmp"$tex
 tmpcsv="tmp"$csv
+outputfolder="generated/"
 
 # Process Class File (CSV)
 # Replace ',"' with '|'
 # Replace closing '"' with nothing
 # Write out to tmp csv file
+
+mkdir $outputfolder
 
 cat "$infile" | sed -e 's/,"/|/' | sed -e 's/"//' > $tmpcsv
 
@@ -28,7 +31,7 @@ while IFS=$'\r\n' read -r line
         studentname="${array[1]}"
 
         # Construct output filename of form lastname_firstname_matriculationnumber.tex
-        outfile=`echo $studentname | sed 's/, /_/'`$sep$studentnumber$tex
+        outfile=$outputfolder`echo $studentname | sed 's/, /_/'`$sep$studentnumber$tex
 
         # Construct text for student entry in file with student's name
         nametext="s/student{}/student{"
@@ -45,3 +48,4 @@ while IFS=$'\r\n' read -r line
         cat $template | sed -e "$nametext" | sed -e "$numtext"> $outfile
 
     done < "$tmpcsv"
+
