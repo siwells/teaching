@@ -12,4 +12,5 @@ Takes a CSV extracted from tracker and creates individual marking sheets from te
 2. Save to CSV
 3. Use marking script to produce student mark sheets, e.g. ./marking.sh class.csv
 
-      $ ./marking.sh classlist.csv cw1_template.tex
+
+        $ ./marking.sh classlist.csv cw1_template.tex
