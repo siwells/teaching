@@ -1,0 +1,77 @@
+\documentclass[letterpaper,11pt]{../resources/texMemo}
+
+\usepackage{graphicx}
+\usepackage{url}
+
+\student{}
+\matric{}
+\grade{  \%} 
+\marker{Simon Wells}
+\subject{Feedback on SET09103 Coursework Assignment \#1}
+
+\logo{\includegraphics[width=0.25\textwidth]{../resources/enu_logo.png}}
+
+\begin{document}
+\maketitle
+
+\paragraph{Written Feedback:} The core objective was to demonstrate your understanding of the Python Flask micro-framework by creating a prototype web application for an online directory about a given subject.
+
+
+
+
+
+
+\paragraph{Information about your grade:} The marking scheme is devised so as to reward those who go beyond the core taught material by integrating their own self-directed learning and discoveries. A reasonable attempt at a difficult application is likely to attract more marks than a complete implementation of a simple application. As a general rule, the more functionality, the better the mark, however your functionality should be consistent with a cohesive overall design. This coursework is worth 40\% of your overall grade for this module. The remaining 60\% come from coursework \#2.
+
+\begin{description}
+\item
+
+%\item[0\%-$40\%] If you have received a grade of less than 40\% then you have not reached the required standard for a pass in this particular assessment. This could be because you have a web-app that has fundamental problems or ommissions. For example, these may be in terms of functionality, robustness, relibiity, or efficiency. If your web-app is non-functioning (or barely functioning) and does not incorporate multipe routes then it is likely to be in this grade range. You still have chances to improve the situation. Talk to the module leader about a strategy that can help you to achieve a better result.
+
+%\item[40-49\%] This grade band indicates work that is acceptable, that demonstrates basic skills in the core concepts covered by the module, but where there is plenty of room for improvement. To achieve a mark in this band you must have developed your own working web-app with multiple routes allowing the user some, but not extensive interaction. It may be based directly on an extension of the practical work covered in class and your report must adequately describe your work.
+
+%\item[50-59\%] A grade in this band constitutes good work. A submission in this mark band will indicate that you have developed a web-app that is less ambitious in its functionality but will offer the user suitable ways of interacting. Your report will be well written and will reference the material you have used.
+
+%\item[60-69\%] Work in this grade band is at a very-good level. To achieve a mark in this band you will have developed a web-app with very good functionality, for example, offering the user multiple URLs together with some evidence of appropriately designed routing, correct use of requests, redirects, responses, custom error code handling, and appropriate use of static files and templates. Your report will address all the necessary sections effectively, be very well written and clearly presented and will reference material you have used.  
+
+%\item[70-100\%] This grade band indicates work at an excellent (70+), exceptional (80+), or exemplary (90+) level. A submission in this mark band will consist of an application that has extended the lab work covered in class to offer an excellent level of functionality, both in terms of the number of features and their quality of implementation. To attract a grade at this level a submission must also have effectively evaluated. Your design and code will be excellent – making good use of Flask features and having an exemplary design, application, and URL layout (API). Your report with the sections detailed above will be comprehensive, very well written and well presented and will correctly reference all the material you have used. This is likely to include textbooks, online forums and tutorials and some of the suggested reading for the module.
+
+\end{description}
+
+\newpage
+\paragraph{General Feedback to the class:} This doesn’t necessarily apply to you personally but there were some general points that I noticed which it is of benefit to everyone to consider.
+
+\begin{itemize}
+\item Pay attention to the instructions that you are given. Nobody was penalised in this instance for not adhering to the submission instructions but if I say submit a PDF then you must sub- mit a PDF. Similarly if I instruct that both source code and report must be archived together then you must do so. This way I can handle and mark your work in an efficient way that minimises the opportunity for mistakes and let’s me return marks to you as soon as possible.
+\item Generally, the highest marks are awarded for those projects that go way beyond what we have covered in the labs \& lectures. It is not sufficient merely to assemble the examples from the workbook into a web-app if you intend to achieve the highest marks and to get the most from the module. This is where you have an opportunity to show evidence of all the self-directed study that you have been doing all trimester. It is also a good way to pursue in depth any aspects of the module that you have found particularly interesting.
+\item Please make sure that you understand a topic before you try to integrate it into your own code. The workbook, code examples, and case study show many simple examples of each topic, either in isolation, as in the workbook and examples, or integrated into a larger app, as in the case study. If you try to integrate some functionality before you fully understand what you are doing then there is more liklihood that you will run into problems that you either need help to solve or that take longer than they should to solve.
+\item As a rule you should write a small bit of code, test it, then add more. Don’t write code, get stuck when it doesn’t work, then add more as you will end up with a big tangled mess of code. If necessary comment out code in order to simplify what you are testing so you can get your applications working in isolation. Then start adding your other code back in.
+\item For most of you that did struggle to get a good mark for this assignment, the reason was usually due to poor time management and leaving it too late to get started. It is always a good idea to start your assignment soon after it is handed out. The main reason is because this gives you time to actually think about the problem you are trying to solve and also some time for a false start, for example, to prototype something that you can throw away.
+\item If you didn’t use Git to manage your assignment's source code then I strongly recommend that you consider learning it and using it in the future. It will make your life as a developer easier, and if you don’t intend to be a developer, for example you intend to be a digital designer, then learning Git will make it easier for you to interact constructively with the programmers. Some tips for using Git:
+
+\begin{itemize}
+\item Keep your git repo clean. Find out how to use the .gitignore file to specify particular files that should not be included in a git repository.
+\item Write Git commit messages that make sense and record what the commit contains. Re- member that you can also write longer commit messages than just the 80 character summary that we get through \emph{git commit -m ``''}. This is a good blog post on writing commit messages: \url{http://chris.beams.io/posts/git-commit/}
+\item Commit your code to Git as often as you can. At least after each new feature, each new bug-fix, each new function, \&c. The more often you commit then the more granularity you have and the more opportunity to roll-back to a useful point in an earlier version of your code to try a different solution in a new branch.
+
+\end{itemize}
+
+\item Invest some time in learning to debug your applications. This is a skill that you will develop over time as you write more code, make more mistakes, and learn to recover for them. There are many tools that will help you along the way, learning to use a debugger is a good invest- ment of your time. That said, undertanding the problem you are trying to solve, the code that you have written, and then systematically breaking down your app into smaller parts until your app works again, is a valid approach. Comment out things that don’t work if nec- essary, until things work again. If you are not using a debugger then use print statements or similar such as log lines to output the values of variables so that you can compare what they actually are to what you think they should be. Most importantly:
+
+\begin{enumerate}
+
+\item Read the error that accompanies your program’s failure. For example, Python outputs a long ``stack trace'' when your web-app fails in debug mode. Learning to decod error messages and track down erros is an important skill to develop. There were many instances where students contacted my this trimester about problems but they hadn't actually read the errors that were being displayed. Often the error will tell you what is wrong, and in the case of Git, will often make suggestions about how to fix the problem.
+
+\item If your program is broken, don’t add more features until you have a working program again. If necessary, comment out some code so that you can narrow down to exactly what is causing the issue.
+
+\item If you are getting warnings but no errors, don’t ignore them. Warnings generally indicate things that are at best non-standard, and at worst, indicators of code that is likely to cause your program to fail. Read, understand, and address all warnings; you can decide to ignore a warning, but should only do so when you are confident that you know why you were warned and that it won’t affect your program.
+
+\end{enumerate}
+
+
+\item Be as organised as you can when you are developing. Create folders in which to store your files and organise them in a way that makes sense.
+\item Finally, if you struggled with Python programming or any other technical aspect of this module then the only solution is to practise. Write more code. There are no shortcuts to becoming a capable and confident programmer. I have been lucky enough to work with some great programmers in my career and every single one of them became great through a lot of practice.
+\end{itemize}
+
+
+\end{document}
